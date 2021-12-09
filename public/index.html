@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!--
+      link to css
+    -->
     <link rel="stylesheet" href="styles.css">
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -20,12 +16,11 @@
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
     -->
 
+    <!--
+      Code block provided via Tableau's website to embedded their dashboards on pages
+    -->
     <script type="text/javascript"
     src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
 
@@ -47,20 +42,54 @@
 
     <title>Covid Status</title>
   </head>
-  
+    <!--
+      onload will allow tableau dashboard to load at time body og page loads to display up to date info
+    -->
   <body onload="initViz();">
     <div id="root"></div>
-    <div id="vizContainer" style="width:1000px; height:2000px; margin-left: 1545px; margin-top: -420px; overflow:auto;"></div>
-    
     <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
+      Poorly executed attempts to postion text
     -->
+    <div id="Heading" style="margin-left:645px; margin-top: 0px;"><h1>Current Covid-19 Status</h1></div>
+    <div id="CDC" style="margin-left:25px; margin-top: 0px;display: inline-block; max-width: 55%;overflow: auto;
+      text-overflow: ellipsis; white-space: wrap; font-size:24px; ">
+
+      <!--
+        Text Provide from CDC.gov
+      -->
+      <b>If you’ve been fully vaccinated:</b>
+      <p>
+        You can resume activities that you did prior to the pandemic.
+        To reduce the risk of being infected with the Delta variant and possibly spreading it to others, wear a mask indoors in public if you are in an area of substantial or high transmission.
+        You might choose to wear a mask regardless of the level of transmission if you have a weakened immune system or if, because of your age or an underlying medical condition, you are at increased risk for severe disease, or if a member of your household has a weakened immune system, is at increased risk for severe disease, or is unvaccinated.
+      </p>
+        <b>You can travel.</b>
+        <p></p>
+        If you travel in the United States, you do not need to get tested before or after travel or self-quarantine after travel.
+        You need to pay close attention to the situation at your international destination before traveling outside the United States.
+        You do NOT need to get tested before leaving the United States unless your destination requires it.
+        You still need to show a negative test result or documentation of recovery from COVID-19 before boarding an international flight to the United States.
+        You should still get tested 3-5 days after international travel.
+        You do NOT need to self-quarantine after arriving in the United States.
+        Wearing a mask over your nose and mouth is required on planes, buses, trains, and other forms of public transportation traveling into, within, or out of the United States and while indoors at U.S. transportation hubs such as airports and stations. Travelers are not required to wear a mask in outdoor areas of a conveyance (like on open deck areas of a ferry or the uncovered top deck of a bus).
+      </p>
+      <p>
+        For persons who live outside the United States and are considering travel to the United States, please visit International Travel for further information.
+        You should still get tested if you’ve had close contact with someone who has COVID-19 or if you have symptoms of COVID-19.
+        If you’ve had close contact with someone who has COVID-19, you should get tested 5-7 days after your exposure, even if you don’t have symptoms. You should also wear a mask indoors in public for 14 days following exposure or until your test result is negative.
+        If you have symptoms of COVID-19, you should get tested and stay home and away from others.
+        If your test result is positive, isolate at home for 10 days.
+        You will still need to follow guidance at your workplace and local businesses.
+      </p>
+        <b>Close Contact</b>
+        <p>
+        Someone who was less than 6 feet away from an infected person (laboratory-confirmed or a clinical diagnosis) for a cumulative total of 15 minutes or more over a 24-hour period. For example, three individual 5-minute exposures for a total of 15 minutes.
+        Learn more about close contact. 
+      </p>
+    </div>
+    <!--
+      Positioning of tableau dashboard
+    -->
+    <div id="vizContainer" style="width:1000px; height:2000px; position: absolute; top: 0px; left: 1500px; overflow:auto;"></div>
   </body>
 </html>
